@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<style>
+h1{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+h2{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+textarea.RAPID{
+    height: 251px;
+    width: 378px;
+    margin-left:  23px;
+    margin-top: -6px;
+   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+</style>
+<head>
+<title>RAPID Developer</title>
+<script>
+function transFunction() {
+  document.getElementById("textarea1").value += "trans";
+}
+function testFunction() {
+  document.getElementById("textarea1").value += "TEST";
+}
+function endtestFunction() {
+  document.getElementById("textarea1").value += "ENDTEST";
+}
+function moveLFunction() {
+  document.getElementById("textarea1").value += "moveL";
+}
+function moveJFunction() {
+  document.getElementById("textarea1").value += "moveJ";
+}
+function moveCFunction() {
+  document.getElementById("textarea1").value += "moveC";
+}
+function offsFunction() {
+  var select = document.getElementById("variablelist2");
+  var selectoutput = select.options[select.selectedIndex].value;
+  var output = "Offs(" + selectoutput + ", " + document.getElementById("coordx").value + ", " + document.getElementById("coordy").value + ", " + document.getElementById("coordz").value + ")";
+  document.getElementById("textarea1").value += output;
+}
+function dotFunction() {
+  document.getElementById("textarea1").value += ".";
+}
+function commaFunction() {
+  document.getElementById("textarea1").value += ",";
+}
+function openoffsFunction() {
+  document.getElementById("textarea1").value += "(";
+}
+function closeoffsFunction() {
+  document.getElementById("textarea1").value += ")";
+}
+function openbracFunction() {
+  document.getElementById("textarea1").value += "[";
+}
+function closebracFunction() {
+  document.getElementById("textarea1").value += "]";
+}
+function coordFunction() {
+  document.getElementById("textarea1").value = document.getElementById("textarea1").value + "(" + document.getElementById("coordx").value + ", " + document.getElementById("coordy").value + ", " + document.getElementById("coordz").value + ")";
+}
+function variablenameFunction() {
+  document.getElementById("textarea1").value += document.getElementById("variablename").value;
+}
+function toolnameFunction() {
+  document.getElementById("textarea1").value += document.getElementById("toolname").value;
+}
+function variablelistFunction() {
+  var select = document.getElementById("variablelist2");
+  document.getElementById("variablelist").value += document.getElementById("variablename").value + "\r\n";
+  var output = document.getElementById("variablename").value;
+  select.options[select.options.length] = new Option(output, output);
+}
+function toollistFunction() {
+  var select = document.getElementById("toollist2");
+  document.getElementById("toollist").value += document.getElementById("toolname").value + "\r\n";
+  var output = document.getElementById("toolname").value;
+  select.options[select.options.length] = new Option(output, output);
+}
+function whileFunction() {
+  document.getElementById("textarea1").value += "WHILE";
+}
+function endwhileFunction() {
+  document.getElementById("textarea1").value += "ENDWHILE";
+}
+function ifFunction() {
+  document.getElementById("textarea1").value += "IF";
+}
+function endifFunction() {
+  document.getElementById("textarea1").value += "ENDIF";
+}
+function spaceFunction() {
+  document.getElementById("textarea1").value += " ";
+}
+function newlineFunction() {
+  document.getElementById("textarea1").value += "\r\n";
+}
+function endlineFunction() {
+  document.getElementById("textarea1").value += ";" + "\r\n";
+}
+function resetoutputFunction() {
+  document.getElementById("textarea1").value = "";
+}
+function resetvariablelistFunction() {
+  var select = document.getElementById("variablelist2");
+  select.options.length = 0;
+  document.getElementById("variablename").value = "";
+  document.getElementById("variablelist").value = "";
+}
+function resettoollistFunction() {
+  var select = document.getElementById("toollist2");
+  select.options.length = 0;
+  document.getElementById("toolname").value = "";
+  document.getElementById("toollist").value = "";
+}
+function setequalFunction() {
+  document.getElementById("textarea1").value += ":=";
+}
+function mathaddFunction() {
+  document.getElementById("textarea1").value += "+";
+}
+function mathsubFunction() {
+  document.getElementById("textarea1").value += "-";
+}
+function mathmulFunction() {
+  document.getElementById("textarea1").value += "*";
+}
+function mathdivFunction() {
+  document.getElementById("textarea1").value += "/";
+}
+function setFunction() {
+  document.getElementById("textarea1").value += "SET";
+}
+function resetFunction() {
+  document.getElementById("textarea1").value += "RESET";
+}
+function tpreadnumFunction() {
+  document.getElementById("textarea1").value += "TPReadNum";
+}
+function tpwriteFunction() {
+  document.getElementById("textarea1").value += "TPWrite";
+}
+function numberzeroFunction() {
+  document.getElementById("textarea1").value += "0";
+}
+function numberoneFunction() {
+  document.getElementById("textarea1").value += "1";
+}
+function numbertwoFunction() {
+  document.getElementById("textarea1").value += "2";
+}
+function numberthreeFunction() {
+  document.getElementById("textarea1").value += "3";
+}
+function numberfourFunction() {
+  document.getElementById("textarea1").value += "4";
+}
+function numberfiveFunction() {
+  document.getElementById("textarea1").value += "5";
+}
+function numbersixFunction() {
+  document.getElementById("textarea1").value += "6";
+}
+function numbersevenFunction() {
+  document.getElementById("textarea1").value += "7";
+}
+function numbereightFunction() {
+  document.getElementById("textarea1").value += "8";
+}
+function numbernineFunction() {
+  document.getElementById("textarea1").value += "9";
+}
+function numbertenFunction() {
+  document.getElementById("textarea1").value += "10";
+}
+function fineFunction() {
+  document.getElementById("textarea1").value += "fine";
+}
+function vspeedFunction() {
+  var select = document.getElementById("vspeed");
+  document.getElementById("textarea1").value += select.options[select.selectedIndex].value;
+}
+function variableselectedlistFunction() {
+  var select = document.getElementById("variablelist2");
+  document.getElementById("textarea1").value += select.options[select.selectedIndex].value;
+}
+function toollistselectedFunction() {
+  var select = document.getElementById("toollist2");
+  document.getElementById("textarea1").value += select.options[select.selectedIndex].value;
+}
+</script>
+</head>
+<body>
+<center>
+<h1>RAPID Developer</h1>
+<table>
+<tr>
+<td>
+<h2>COMMANDS:</h2>
+<button onclick="setequalFunction()">:=</button>
+<button onclick="transFunction()">TRANS</button>
+<button onclick="testFunction()">TEST</button>
+<button onclick="endtestFunction()">ENDTEST</button>
+<button onclick="moveLFunction()">moveL</button>
+<button onclick="moveJFunction()">moveJ</button>
+<button onclick="moveCFunction()">moveC</button>
+<button onclick="offsFunction()">Offs</button>
+<button onclick="whileFunction()">WHILE</button>
+<button onclick="endwhileFunction()">ENDWHILE</button>
+<button onclick="ifFunction()">IF</button>
+<button onclick="endifFunction()">ENDIF</button>
+<button onclick="setFunction()">SET</button>
+<button onclick="resetFunction()">RESET</button>
+</br>
+<button onclick="newlineFunction()">NewLine</button>
+<button onclick="dotFunction()">.</button>
+<button onclick="commaFunction()">,</button>
+<button onclick="openoffsFunction()">(</button>
+<button onclick="closeoffsFunction()">)</button>
+<button onclick="openbracFunction()">[</button>
+<button onclick="closebracFunction()">]</button>
+<button onclick="endlineFunction()">;</button>
+</br>
+<button onclick="mathaddFunction()">+</button>
+<button onclick="mathsubFunction()">-</button>
+<button onclick="mathmulFunction()">*</button>
+<button onclick="mathdivFunction()">/</button>
+</br>
+<button onclick="numberzeroFunction()">0</button>
+<button onclick="numberoneFunction()">1</button>
+<button onclick="numbertwoFunction()">2</button>
+<button onclick="numberthreeFunction()">3</button>
+<button onclick="numberfourFunction()">4</button>
+<button onclick="numberfiveFunction()">5</button>
+<button onclick="numbersixFunction()">6</button>
+<button onclick="numbersevenFunction()">7</button>
+<button onclick="numbereightFunction()">8</button>
+<button onclick="numbernineFunction()">9</button>
+<button onclick="numbertenFunction()">10</button>
+</br>
+<button onclick="tpreadnumFunction()">TPReadNum</button>
+<button onclick="tpwriteFunction()">TPWrite</button>
+</br>
+<h2>VARIABLES:</h2>
+Variable Name:<input id="variablename" type="text" placeholder="ENTER VARIABLE NAME"/>
+<button onclick="variablenameFunction()">VAR</button>
+<button onclick="variablelistFunction()">ADD VARIABLE TO LIST</button>
+</br>
+<textarea id="variablelist" rows="5" cols="40"></textarea>
+</br>
+<select id="variablelist2"></select>
+<button onclick="variableselectedlistFunction()">ADD VARIABLE TO COMMAND LIST</button>
+</br>
+<select id="vspeed">
+<option value="v50">v50</option>
+<option value="v100">v100</option>
+<option value="v1000">v1000</option>
+</select>
+<button onclick="vspeedFunction()">ADD VSPEED</button>
+</br>
+<button onclick="fineFunction()">FINE</button>
+</br>
+</td>
+<td>
+<div style="background-image: url(teach_penant.png); height: 342px; width: 607px; border: 1px solid black;"> 
+</br></br></br>
+<textarea id="textarea1" class="RAPID" rows="8" cols="50" placeholder="ENTER RAPID COMMANDS"></textarea>
+</div>
+</td>
+<td>
+<h2>COORDINATES:</h2>
+COORD X:<input id="coordx" type="text" placeholder="ENTER X VALUE"/></br>
+COORD Y:<input id="coordy" type="text" placeholder="ENTER Y VALUE"/></br>
+COORD Z:<input id="coordz" type="text" placeholder="ENTER Z VALUE"/></br>
+<button onclick="coordFunction()">ADD COORD</button>
+</br>
+<h2>TOOLS:</h2>
+<textarea id="toollist" rows="5" cols="40"></textarea>
+</br>
+Tool Name:<input id="toolname" type="text" placeholder="ENTER TOOL NAME"/>
+<button onclick="toolnameFunction()">TOOL</button>
+<button onclick="toollistFunction()">ADD TOOL TO LIST</button>
+</br>
+<select id="toollist2"></select>
+<button onclick="toollistselectedFunction()">ADD TOOL TO COMMAND LIST</button>
+</br>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+<button onclick="spaceFunction()" style="width:607px;">SPACE</button>
+</td>
+<td>
+</br>
+<button onclick="resetoutputFunction()">RESET RAPID COMMANDS WINDOW</button>
+<button onclick="resetvariablelistFunction()">RESET VARIABLE LIST</button>
+<button onclick="resettoollistFunction()">RESET TOOL LIST</button>
+</td>
+</tr>
+</table>
+</center>
+</body>
+</html>
